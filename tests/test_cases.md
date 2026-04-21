@@ -1,4 +1,4 @@
-# Test Cases – FIT4012 Lab 2
+# Test Cases - FIT4012 Lab 2
 
 ## Caesar Cipher
 - [x] Encrypt `I LOVE YOU` với key `3`
@@ -12,4 +12,4 @@
 
 ## Validation / File input
 - [x] Kiểm tra đầu vào không hợp lệ
-- [x] Đọc thông điệp từ `data/input.txt`
+- [x] Đọc thông điệp từ `data/input.txt
