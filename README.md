@@ -1,75 +1,40 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/9MWclHpA)
-# fit4012-lab2-classical-ciphers-starter
+# FIT4012 - Lab 2: Classical Ciphers
 
-Starter repo cho **FIT4012 – Lab 2: Mã hoá cổ điển**.
+##  Thông tin sinh viên
+- **Họ và tên:** Nguyễn Đình Trí
+- **Mã sinh viên:** 1871020580
 
-## Mục tiêu
-- Cài đặt và mở rộng **Caesar Cipher**.
-- Cài đặt và mở rộng **Rail Fence Cipher**.
-- Làm quen với quy trình nộp bài qua **GitHub repo**.
-- Ghi lại minh chứng bằng **tests**, **logs** và **report-1page**.
+##  Trạng thái dự án
+- **Tiến độ:** Hoàn thành 100% yêu cầu (Q1 - Q8).
+- **Kiểm thử tự động:** Đã vượt qua hệ thống Autograder (Tích xanh).
 
-## Nội dung chính của bài
-- **Caesar Cipher**
-  - Q1: xử lý chữ thường
-  - Q2: giữ dấu cách
-  - Q3: giải mã
-- **Rail Fence Cipher**
-  - Q4: thay đổi số ray và quan sát kết quả
-  - Q5: giải mã
-  - Q6: giữ dấu cách
-  - Q7: kiểm tra đầu vào
-  - Q8: đọc thông điệp từ file `input.txt`
+##  Kết quả thực hiện
+### 1. Caesar Cipher (Q1 - Q3)
+- Cài đặt thành công mã hóa và giải mã.
+- Hỗ trợ xử lý chữ cái viết thường và giữ nguyên định dạng dấu cách.
 
-## Cấu trúc repo
-```text
-fit4012-lab2-classical-ciphers-starter/
-├── README.md
-├── assignment-obe.md
-├── assignment-classroom.md
-├── buoi3-guide.md
-├── report-1page.md
-├── src/
-│   ├── caesar.cpp
-│   └── rail_fence.cpp
-├── data/
-│   └── input.txt
-├── tests/
-│   └── test_cases.md
-├── logs/
-│   └── run_log.md
-└── .github/
-    ├── scripts/
-    │   └── check_lab2.py
-    └── workflows/
-        └── lab2-check.yml
-```
+### 2. Rail Fence Cipher (Q4 - Q8)
+- Mã hóa và giải mã chuẩn xác theo mô hình zigzag (đã test kỹ với 4 rails).
+- Xử lý tốt dấu cách và kiểm tra tính hợp lệ của đầu vào (chỉ nhận chữ cái và khoảng trắng).
+- Tích hợp tính năng đọc thông điệp trực tiếp từ file `data/input.txt`.
 
-## Cách làm bài
-1. Nhận repo qua GitHub Classroom hoặc fork repo.
-2. Hoàn thiện `src/caesar.cpp` và `src/rail_fence.cpp`.
-3. Điền `tests/test_cases.md`.
-4. Điền `logs/run_log.md`.
-5. Hoàn thiện `report-1page.md`.
-6. Commit, push và nộp link repo.
+##  Cấu trúc Repo
+- `src/`: Chứa mã nguồn chính (`caesar.cpp`, `rail_fence.cpp`).
+- `data/`: Chứa dữ liệu đầu vào `input.txt`.
+- `tests/`: Chứa danh sách các trường hợp kiểm thử `test_cases.md`.
+- `logs/`: Nhật ký vận hành chương trình `run_log.md`.
+- `report-1page.md`: Báo cáo tóm tắt quy trình thực hiện.
+- `lab2-guide.md`: Checklist hướng dẫn và tiến độ bài làm.
 
-## Cách biên dịch
+##  Hướng dẫn biên dịch và chạy
 ### Caesar Cipher
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -o caesar_bin src/caesar.cpp
-./caesar_bin
+g++ -std=c++17 -O2 -o caesar src/caesar.cpp
+./caesar
 ```
-
 ### Rail Fence Cipher
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -o rail_bin src/rail_fence.cpp
-./rail_bin
+g++ -std=c++17 -O2 -o rail_fence src/rail_fence.cpp
+./rail_fence
 ```
-
-## File dữ liệu mẫu
-Repo đã có sẵn file `data/input.txt` để phục vụ Q8.
-
-## Lưu ý
-- Không xóa các file trong `.github/`.
-- Không đổi tên file nguồn trừ khi giảng viên cho phép.
-- Nên có nhiều commit có ý nghĩa trong quá trình làm bài.
