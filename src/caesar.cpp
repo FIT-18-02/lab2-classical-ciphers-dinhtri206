@@ -34,27 +34,25 @@ string caesar_decrypt(const string &ciphertext, int shift) {
 }
 
 int main() {
-    cout << "=== Caesar Cipher Demo ===\n";
-    cout << "1. Encrypt\n2. Decrypt\nChoose: ";
     int choice;
-    cin >> choice;
-    cin.ignore();
     string message;
     int shift;
-    cout << "Enter message: ";
-    getline(cin, message);
-    cout << "Enter key: ";
-    cin >> shift;
+
+    if (!(cin >> choice)) return 0;
+    cin.ignore();
+    
+    if (!getline(cin, message)) return 0;
+    if (!(cin >> shift)) return 0;
+
     if (!is_valid_message(message)) {
-        cout << "Invalid input. Only letters and spaces are allowed.\n";
         return 0;
     }
+
     if (choice == 1) {
-        cout << "Ciphertext: " << caesar_encrypt(message, shift) << "\n";
+        cout << caesar_encrypt(message, shift) << endl;
     } else if (choice == 2) {
-        cout << "Plaintext: " << caesar_decrypt(message, shift) << "\n";
-    } else {
-        cout << "Invalid choice.\n";
+        cout << caesar_decrypt(message, shift) << endl;
     }
+    
     return 0;
 }
